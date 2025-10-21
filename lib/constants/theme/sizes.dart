@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class AppSizes {
   // Spacing
   static const double xs = 4.0;
@@ -8,7 +6,20 @@ class AppSizes {
   static const double lg = 24.0;
   static const double xl = 32.0;
   static const double xxl = 48.0;
-  static const double xxxl = 96.0;
+  static const double xxxl = 85.0;
+  static const double xxxxl = 96.0;
+
+  // padding
+  static const double p5 = 5.0;
+  static const double p8 = 8.0;
+  static const double p16 = 16.0;
+  static const double p20 = 20.0;
+  static const double p24 = 24.0;
+  static const double p26 = 26.0;
+  static const double p30 = 30.0;
+  static const double p36 = 36.0;
+  static const double p40 = 40.0;
+  static const double p46 = 46.0;
 
   // Image sizes
   static const double imgXs = 24.0;
@@ -20,10 +31,20 @@ class AppSizes {
   static const double imgXxxl = 350.0;
   static const double imgXxxxl = 400.0;
 
+  // container sizes
+  static const double contXsm = 25.0;
+  static const double contSm = 50.0;
+  static const double contMd = 65.0;
+  static const double contLg = 75.0;
+  static const double contXl = 100.0;
+  static const double contXxL = 125.0;
+
   // Border radius
-  static const double radiusSm = 8.0;
-  static const double radiusMd = 16.0;
-  static const double radiusLg = 24.0;
+  static const double radius8 = 8.0;
+  static const double radius16 = 16.0;
+  static const double radius24 = 24.0;
+  static const double radius30 = 30.0;
+  static const double radius50 = 50.0;
 
   // Icon sizes
   static const double iconSm = 16.0;
@@ -37,28 +58,4 @@ class AppSizes {
   static const double fontXl = 24.0;
   static const double fontXxl = 26.0;
   static const double fontXxxl = 30.0;
-}
-
-class AppPadding {
-  static const EdgeInsets allSm = EdgeInsets.all(AppSizes.sm);
-  static const EdgeInsets allMd = EdgeInsets.all(AppSizes.md);
-  static const EdgeInsets allLg = EdgeInsets.all(AppSizes.lg);
-
-  static const EdgeInsets horizontalSm =
-      EdgeInsets.symmetric(horizontal: AppSizes.sm);
-
-  static const EdgeInsets horizontalMd =
-      EdgeInsets.symmetric(horizontal: AppSizes.md);
-
-  static const EdgeInsets horizontalLg =
-      EdgeInsets.symmetric(horizontal: AppSizes.lg);
-
-  static const EdgeInsets verticalSm =
-      EdgeInsets.symmetric(vertical: AppSizes.sm);
-
-  static const EdgeInsets verticalMd =
-      EdgeInsets.symmetric(vertical: AppSizes.md);
-
-  static const EdgeInsets verticalLg =
-      EdgeInsets.symmetric(vertical: AppSizes.lg);
 }
