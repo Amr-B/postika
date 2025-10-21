@@ -32,6 +32,8 @@ class ActionsRow extends StatelessWidget {
             ),
           ),
           AppElevatedButton(
+            bgColor: Colors.white,
+            titleColor: Colors.black,
             onPressed: controller.nextPage,
             title: AppTexts.next,
           )
