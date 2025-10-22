@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
 import 'package:poskita/common/field_info.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/controllers/auth_controller.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
+import '../../controllers/auth_controller.dart';
 
-class CreatePasswordPage extends StatefulWidget {
-  const CreatePasswordPage({super.key});
+class VerifyEmail extends StatefulWidget {
+  const VerifyEmail({super.key});
 
   @override
-  State<CreatePasswordPage> createState() => _CreatePasswordPageState();
+  State<VerifyEmail> createState() => _VerifyEmailState();
 }
 
-class _CreatePasswordPageState extends State<CreatePasswordPage> {
-  //  call controller
+class _VerifyEmailState extends State<VerifyEmail> {
   final authController = Get.put(AuthController());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.authBg,
-      appBar: AuthAppBar(onTap: authController.goBack),
+      appBar: AppBar(
+        backgroundColor: AppColors.authBg,
+        toolbarHeight: 100,
+      ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -45,7 +45,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
 
                       // > title
                       Text(
-                        AppTexts.createYourPw,
+                        AppTexts.verifyYourEmail,
                         style: TextStyle(
                           fontSize: AppSizes.fontXxxl,
                           fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: AppSizes.p16),
                         child: Text(
-                          AppTexts.loginRegSubT,
+                          AppTexts.verifyEmailSubT,
                           style: TextStyle(
                             fontSize: AppSizes.fontSm,
                             color: Colors.grey,
@@ -74,31 +74,18 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // > password
+                              // > first name
                               AppTextField(
-                                      hint: "Password",
-                                      icon: Icons.person_outline)
+                                      hint: "Email", icon: Icons.person_outline)
                                   .animate()
-                                  .fade(duration: 300.ms)
-                                  .slideX(
-                                      duration: 500.ms,
-                                      curve: Curves.easeInOut),
-                              SizedBox(height: AppSizes.lg),
-
-                              // > confirm password
-                              AppTextField(
-                                      hint: "Confirm Password",
-                                      icon: Icons.person_outline)
-                                  .animate(delay: 100.ms)
                                   .fade(duration: 300.ms)
                                   .slideX(
                                       duration: 500.ms,
                                       curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.md),
 
-                              // > password rules
                               FieldInfo(
-                                info: AppTexts.pwRules,
+                                info: AppTexts.verifyEmRules,
                                 fontSize: AppSizes.fontMd,
                               ),
                               Spacer(),
@@ -108,7 +95,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: authController.goVerifyEmail,
+                                onPressed: authController.goCreatePw,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

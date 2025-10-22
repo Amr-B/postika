@@ -41,6 +41,9 @@ class AppTexts {
   static const String pwRules =
       "Your password must be 8 characters long with letters, numbers, and symbols for security.";
 
+  static const String verifyEmRules =
+      "We've sent a verification to youraddress@gmail.com. Check your inbox and confirm your registration";
+
   // >> actions << //
   static const String skip = 'Skip';
   static const String next = 'Next';
