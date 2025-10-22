@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
 import 'package:poskita/common/circular_checkbox.dart';
@@ -6,12 +7,21 @@ import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/controllers/auth_controller.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class CreatePasswordPage extends StatefulWidget {
+  const CreatePasswordPage({super.key});
+
+  @override
+  State<CreatePasswordPage> createState() => _CreatePasswordPageState();
+}
+
+class _CreatePasswordPageState extends State<CreatePasswordPage> {
+  //  call controller
+  final authController = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +39,12 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     children: [
                       // > circular icon
-                      AuthCircularIcon(iconPath: AppImages.authUser),
+                      AuthCircularIcon(iconPath: AppImages.authLock),
                       SizedBox(height: AppSizes.sm),
 
                       // > title
                       Text(
-                        AppTexts.setYourProfile,
+                        AppTexts.createYourPw,
                         style: TextStyle(
                           fontSize: AppSizes.fontXxxl,
                           fontWeight: FontWeight.bold,
@@ -63,14 +73,14 @@ class LoginPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // > first name
+                              // > password
                               AppTextField(
-                                  hint: "Name", icon: Icons.person_outline),
+                                  hint: "Password", icon: Icons.person_outline),
                               SizedBox(height: AppSizes.lg),
 
-                              // > last name
+                              // > confirm password
                               AppTextField(
-                                  hint: "Last Name",
+                                  hint: "Confirm Password",
                                   icon: Icons.person_outline),
                               SizedBox(height: AppSizes.md),
 
@@ -83,7 +93,7 @@ class LoginPage extends StatelessWidget {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: () {},
+                                onPressed: authController.goCreatePw,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

@@ -22,7 +22,7 @@ class ActionsRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           TextButton(
-            onPressed: () {},
+            onPressed: controller.skip,
             child: Text(
               AppTexts.skip,
               style: TextStyle(
