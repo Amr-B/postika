@@ -9,18 +9,19 @@ import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
+import 'package:poskita/presentation/authentication/widgets/verify_code_widget.dart';
 
 import '../../common/elevated_button.dart';
 import '../../controllers/auth_controller.dart';
 
-class VerifyEmail extends StatefulWidget {
-  const VerifyEmail({super.key});
+class VerifyCodePage extends StatefulWidget {
+  const VerifyCodePage({super.key});
 
   @override
-  State<VerifyEmail> createState() => _VerifyEmailState();
+  State<VerifyCodePage> createState() => _VerifyCodePageState();
 }
 
-class _VerifyEmailState extends State<VerifyEmail> {
+class _VerifyCodePageState extends State<VerifyCodePage> {
   final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
@@ -38,12 +39,12 @@ class _VerifyEmailState extends State<VerifyEmail> {
                   child: Column(
                     children: [
                       // > circular icon
-                      AuthCircularIcon(iconPath: AppImages.authLock),
+                      AuthCircularIcon(iconPath: AppImages.authSmPhone),
                       SizedBox(height: AppSizes.sm),
 
                       // > title
                       Text(
-                        AppTexts.verifyYourEmail,
+                        AppTexts.enterVerificationCode,
                         style: TextStyle(
                           fontSize: AppSizes.fontXxxl,
                           fontWeight: FontWeight.bold,
@@ -54,7 +55,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: AppSizes.p16),
                         child: Text(
-                          AppTexts.verifyEmailSubT,
+                          AppTexts.enterCodeSubT,
                           style: TextStyle(
                             fontSize: AppSizes.fontSm,
                             color: Colors.grey,
@@ -64,7 +65,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                       ),
                       SizedBox(height: AppSizes.lg),
 
-                      // > fields
+                      // > OTP field
                       Expanded(
                         child: Padding(
                           padding:
@@ -73,27 +74,27 @@ class _VerifyEmailState extends State<VerifyEmail> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               // > first name
-                              AppTextField(
-                                      hint: "Email", icon: Icons.person_outline)
+                              OtpInput()
                                   .animate()
                                   .fade(duration: 300.ms)
                                   .slideX(
                                       duration: 500.ms,
                                       curve: Curves.easeInOut),
-                              SizedBox(height: AppSizes.md),
+                              SizedBox(height: AppSizes.lg),
 
                               FieldInfo(
-                                info: AppTexts.verifyEmRules,
+                                info: AppTexts.verifyCodeRules,
                                 fontSize: AppSizes.fontMd,
+                                textAlign: TextAlign.center,
                               ),
                               Spacer(),
 
                               // > continue button
                               AppElevatedButton(
-                                onPressed: authController.goVerifyCode,
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
+                                onPressed: () {},
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

@@ -44,6 +44,9 @@ class AppTexts {
   static const String verifyEmRules =
       "We've sent a verification to youraddress@gmail.com. Check your inbox and confirm your registration";
 
+  static const String verifyCodeRules =
+      "if you didn't recive the email, tap Resend Code to get a new one.";
+
   // >> actions << //
   static const String skip = 'Skip';
   static const String next = 'Next';
