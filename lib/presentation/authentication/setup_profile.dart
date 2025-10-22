@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
 import 'package:poskita/common/circular_checkbox.dart';
 import 'package:poskita/constants/strings/images.dart';
@@ -26,7 +26,10 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.authBg,
-      appBar: AuthAppBar(onTap: () {}),
+      appBar: AppBar(
+        backgroundColor: AppColors.authBg,
+        toolbarHeight: 100,
+      ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -73,13 +76,24 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
                             children: [
                               // > first name
                               AppTextField(
-                                  hint: "Name", icon: Icons.person_outline),
+                                      hint: "First Name",
+                                      icon: Icons.person_outline)
+                                  .animate()
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
 
-                              // > last name
+                              // > confirm password
                               AppTextField(
-                                  hint: "Last Name",
-                                  icon: Icons.person_outline),
+                                      hint: "Last Name",
+                                      icon: Icons.person_outline)
+                                  .animate(delay: 100.ms)
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.md),
 
                               // > continue check

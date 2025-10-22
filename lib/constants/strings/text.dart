@@ -38,6 +38,9 @@ class AppTexts {
   static const String loginCheck =
       'By tapping continue, you accept to the Postika Terms and privacy Policy for secure usage';
 
+  static const String pwRules =
+      "Your password must be 8 characters long with letters, numbers, and symbols for security.";
+
   // >> actions << //
   static const String skip = 'Skip';
   static const String next = 'Next';

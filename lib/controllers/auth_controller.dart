@@ -5,4 +5,8 @@ class AuthController extends GetxController {
   void goCreatePw() {
     Get.toNamed(AppRoutes.createPw);
   }
+
+  void goBack() {
+    Get.back();
+  }
 }

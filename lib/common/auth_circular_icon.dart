@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 
 class AuthCircularIcon extends StatelessWidget {
@@ -17,7 +18,11 @@ class AuthCircularIcon extends StatelessWidget {
       child: Image.asset(
         iconPath,
         width: AppSizes.imgSm,
-      ),
+      )
+          .animate()
+          .fade(delay: 50.ms)
+          .slideY(duration: 300.ms)
+          .shake(delay: 800.ms),
     );
   }
 }

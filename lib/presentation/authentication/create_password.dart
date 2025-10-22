@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
-import 'package:poskita/common/circular_checkbox.dart';
+import 'package:poskita/common/field_info.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
@@ -28,7 +29,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.authBg,
-      appBar: AuthAppBar(onTap: () {}),
+      appBar: AuthAppBar(onTap: authController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -75,17 +76,31 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                             children: [
                               // > password
                               AppTextField(
-                                  hint: "Password", icon: Icons.person_outline),
+                                      hint: "Password",
+                                      icon: Icons.person_outline)
+                                  .animate()
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
 
                               // > confirm password
                               AppTextField(
-                                  hint: "Confirm Password",
-                                  icon: Icons.person_outline),
+                                      hint: "Confirm Password",
+                                      icon: Icons.person_outline)
+                                  .animate(delay: 100.ms)
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.md),
 
-                              // > continue check
-                              CircularCheckbox(label: AppTexts.loginCheck),
+                              // > password rules
+                              FieldInfo(
+                                info: AppTexts.pwRules,
+                                fontSize: AppSizes.fontMd,
+                              ),
                               Spacer(),
 
                               // > continue button
