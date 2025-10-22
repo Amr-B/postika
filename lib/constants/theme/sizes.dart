@@ -33,6 +33,7 @@ class AppSizes {
 
   // container sizes
   static const double contXsm = 25.0;
+  static const double contXs2 = 35.0;
   static const double contSm = 50.0;
   static const double contMd = 65.0;
   static const double contLg = 75.0;

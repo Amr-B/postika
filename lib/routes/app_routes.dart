@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:poskita/constants/animations/page_anims.dart';
 import 'package:poskita/presentation/authentication/create_password.dart';
+import 'package:poskita/presentation/authentication/key_reasons.dart';
 import 'package:poskita/presentation/authentication/setup_profile.dart';
 import 'package:poskita/presentation/authentication/verify_code.dart';
 import 'package:poskita/presentation/authentication/verify_email.dart';
@@ -12,6 +13,7 @@ class AppRoutes {
   static const createPw = '/createPw';
   static const verifyEmail = '/verifyEmail';
   static const verifyCode = '/verifyCode';
+  static const keyReasons = '/keyReasons';
 
   static final routes = [
     GetPage(
@@ -37,6 +39,11 @@ class AppRoutes {
     GetPage(
       name: verifyCode,
       page: () => const VerifyCodePage(),
+      customTransition: SlideFadeTransition(),
+    ),
+    GetPage(
+      name: keyReasons,
+      page: () => const KeyReasonsPage(),
       customTransition: SlideFadeTransition(),
     ),
   ];

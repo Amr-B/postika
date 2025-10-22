@@ -8,7 +8,6 @@ import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 import 'package:poskita/presentation/authentication/widgets/verify_code_widget.dart';
 
 import '../../common/elevated_button.dart';
@@ -94,7 +93,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: () {},
+                                onPressed: authController.goKeyReasons,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

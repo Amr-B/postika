@@ -14,6 +14,10 @@ class AuthController extends GetxController {
     Get.toNamed(AppRoutes.verifyCode);
   }
 
+  void goKeyReasons() {
+    Get.toNamed(AppRoutes.keyReasons);
+  }
+
   void goBack() {
     Get.back();
   }

@@ -47,6 +47,13 @@ class AppTexts {
   static const String verifyCodeRules =
       "if you didn't recive the email, tap Resend Code to get a new one.";
 
+  static const String seamlessTransactios = "Seamless Transactions";
+  static const String salesInsights = "Comperhensive Sales Insights";
+  static const String userFriendlyInterface = "User-Friendly Interface";
+
+  static const String seamlessTransSubT =
+      "Enable quick and efficient payment processing reducing wait times for customers and improving transaction speed";
+
   // >> actions << //
   static const String skip = 'Skip';
   static const String next = 'Next';
