@@ -8,7 +8,7 @@ import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/controllers/auth_controller.dart';
+import 'package:poskita/controllers/routes_controller.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
@@ -28,7 +28,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -47,7 +47,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                       Text(
                         AppTexts.createYourPw,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -58,7 +58,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                         child: Text(
                           AppTexts.loginRegSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,
@@ -99,7 +99,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                               // > password rules
                               FieldInfo(
                                 info: AppTexts.pwRules,
-                                fontSize: AppSizes.fontMd,
+                                fontSize: AppSizes.font16,
                               ),
                               Spacer(),
 

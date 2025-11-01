@@ -11,7 +11,7 @@ import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/authentication/widgets/verify_code_widget.dart';
 
 import '../../common/elevated_button.dart';
-import '../../controllers/auth_controller.dart';
+import '../../controllers/routes_controller.dart';
 
 class VerifyCodePage extends StatefulWidget {
   const VerifyCodePage({super.key});
@@ -26,7 +26,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -45,7 +45,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       Text(
                         AppTexts.enterVerificationCode,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -56,7 +56,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         child: Text(
                           AppTexts.enterCodeSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,
@@ -83,7 +83,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
 
                               FieldInfo(
                                 info: AppTexts.verifyCodeRules,
-                                fontSize: AppSizes.fontMd,
+                                fontSize: AppSizes.font16,
                                 textAlign: TextAlign.center,
                               ),
                               Spacer(),

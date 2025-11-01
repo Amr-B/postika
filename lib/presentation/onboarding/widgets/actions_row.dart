@@ -26,7 +26,7 @@ class ActionsRow extends StatelessWidget {
             child: Text(
               AppTexts.skip,
               style: TextStyle(
-                fontSize: AppSizes.fontMd,
+                fontSize: AppSizes.font16,
                 color: AppColors.white,
               ),
             ),

@@ -48,7 +48,7 @@ class KeyReasonCard extends StatelessWidget {
                   title,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: AppSizes.fontMd,
+                    fontSize: AppSizes.font16,
                   ),
                 ),
               ],
@@ -57,7 +57,7 @@ class KeyReasonCard extends StatelessWidget {
             Text(
               subTitle,
               style: TextStyle(
-                fontSize: AppSizes.fontSm,
+                fontSize: AppSizes.font12,
                 color: Colors.grey,
               ),
               textAlign: TextAlign.start,

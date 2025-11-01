@@ -23,7 +23,7 @@ class PageViewOne extends StatelessWidget {
                 AppTexts.appName,
                 style: TextStyle(
                   color: AppColors.white,
-                  fontSize: AppSizes.fontXl,
+                  fontSize: AppSizes.font24,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
                 ),
@@ -32,7 +32,7 @@ class PageViewOne extends StatelessWidget {
               Text(
                 AppTexts.onboardingTitle1,
                 style: TextStyle(
-                  fontSize: AppSizes.fontXxxl,
+                  fontSize: AppSizes.font30,
                   color: AppColors.white,
                 ),
               ),
@@ -47,7 +47,7 @@ class PageViewOne extends StatelessWidget {
                 child: Text(
                   AppTexts.onboarding1SubT,
                   style: TextStyle(
-                    fontSize: AppSizes.fontMd,
+                    fontSize: AppSizes.font16,
                     color: AppColors.white,
                   ),
                   textAlign: TextAlign.center,

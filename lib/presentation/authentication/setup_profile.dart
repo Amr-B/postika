@@ -10,7 +10,7 @@ import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
-import '../../controllers/auth_controller.dart';
+import '../../controllers/routes_controller.dart';
 
 class SetupProfilePage extends StatefulWidget {
   const SetupProfilePage({super.key});
@@ -25,9 +25,9 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AppBar(
-        backgroundColor: AppColors.authBg,
+        backgroundColor: AppColors.appBackground,
         toolbarHeight: 100,
       ),
       body: LayoutBuilder(
@@ -47,7 +47,7 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
                       Text(
                         AppTexts.setYourProfile,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -58,7 +58,7 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
                         child: Text(
                           AppTexts.loginRegSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,

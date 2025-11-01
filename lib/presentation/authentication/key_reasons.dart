@@ -9,7 +9,7 @@ import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/authentication/widgets/key_reason_card.dart';
-import '../../controllers/auth_controller.dart';
+import '../../controllers/routes_controller.dart';
 
 class KeyReasonsPage extends StatefulWidget {
   const KeyReasonsPage({super.key});
@@ -24,7 +24,7 @@ class _KeyReasonsPageState extends State<KeyReasonsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -46,7 +46,7 @@ class _KeyReasonsPageState extends State<KeyReasonsPage> {
                         Text(
                           AppTexts.keyReasons,
                           style: TextStyle(
-                            fontSize: AppSizes.fontXxxl,
+                            fontSize: AppSizes.font30,
                             fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.center,
@@ -56,7 +56,7 @@ class _KeyReasonsPageState extends State<KeyReasonsPage> {
                         Text(
                           AppTexts.keyReasonsSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,

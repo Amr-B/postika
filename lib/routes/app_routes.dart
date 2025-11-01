@@ -10,7 +10,10 @@ import 'package:poskita/presentation/authentication/verify_code.dart';
 import 'package:poskita/presentation/authentication/verify_email.dart';
 import 'package:poskita/presentation/onboarding/onboarding.dart';
 
+import '../presentation/home/home_screen.dart';
+
 class AppRoutes {
+  // authentication routes
   static const onboarding = '/onboarding';
   static const setupProfile = '/setupProfile';
   static const createPw = '/createPw';
@@ -21,7 +24,11 @@ class AppRoutes {
   static const enableFaceId = '/enableFaceId';
   static const accessYourAccount = '/accessYourAccount';
 
+  // home routes
+  static const homeScreen = '/homeScreen';
+
   static final routes = [
+    // > authentication routes
     GetPage(
       name: onboarding,
       page: () => const Onboarding(),
@@ -65,6 +72,13 @@ class AppRoutes {
     GetPage(
       name: accessYourAccount,
       page: () => const AccessYourAccount(),
+      customTransition: SlideFadeTransition(),
+    ),
+
+    // > home routes
+    GetPage(
+      name: homeScreen,
+      page: () => const HomeScreen(),
       customTransition: SlideFadeTransition(),
     ),
   ];

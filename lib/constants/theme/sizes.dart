@@ -43,6 +43,9 @@ class AppSizes {
   // Border radius
   static const double radius8 = 8.0;
   static const double radius16 = 16.0;
+  static const double radius18 = 18.0;
+  static const double radius20 = 20.0;
+  static const double radius22 = 22.0;
   static const double radius24 = 24.0;
   static const double radius30 = 30.0;
   static const double radius50 = 50.0;
@@ -53,10 +56,14 @@ class AppSizes {
   static const double iconLg = 32.0;
 
   // Font sizes
-  static const double fontSm = 12.0;
-  static const double fontMd = 16.0;
-  static const double fontLg = 20.0;
-  static const double fontXl = 24.0;
-  static const double fontXxl = 26.0;
-  static const double fontXxxl = 30.0;
+  static const double font12 = 12.0;
+  static const double font14 = 14.0;
+  static const double font16 = 16.0;
+  static const double font18 = 18.0;
+  static const double font20 = 20.0;
+  static const double font22 = 22.0;
+  static const double font24 = 24.0;
+  static const double font26 = 26.0;
+  static const double font28 = 28.0;
+  static const double font30 = 30.0;
 }

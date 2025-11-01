@@ -66,4 +66,8 @@ class AppTexts {
   static const String continu = 'Continue';
   static const String doThisLater = 'Do This Later';
   static const String ok = 'Ok';
+
+  // >> Home & appbar <<
+  static const String hello = 'Hello!';
+  static const String dummyName = 'Dummy User';
 }

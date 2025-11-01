@@ -8,7 +8,7 @@ import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/controllers/auth_controller.dart';
+import 'package:poskita/controllers/routes_controller.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
@@ -28,7 +28,7 @@ class _AccessYourAccountState extends State<AccessYourAccount> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -47,7 +47,7 @@ class _AccessYourAccountState extends State<AccessYourAccount> {
                       Text(
                         AppTexts.accessYourAccount,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -58,7 +58,7 @@ class _AccessYourAccountState extends State<AccessYourAccount> {
                         child: Text(
                           AppTexts.accessYourAccountSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,
@@ -106,7 +106,7 @@ class _AccessYourAccountState extends State<AccessYourAccount> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: routesController.goVerifyEmail,
+                                onPressed: routesController.goHomeScreen,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

@@ -23,7 +23,7 @@ class PageViewTwo extends StatelessWidget {
                 AppTexts.appName,
                 style: TextStyle(
                   color: AppColors.white,
-                  fontSize: AppSizes.fontXl,
+                  fontSize: AppSizes.font24,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
                 ),
@@ -32,7 +32,7 @@ class PageViewTwo extends StatelessWidget {
               Text(
                 AppTexts.onboardingTitle2,
                 style: TextStyle(
-                  fontSize: AppSizes.fontXxxl,
+                  fontSize: AppSizes.font30,
                   color: AppColors.white,
                 ),
               ),
@@ -47,7 +47,7 @@ class PageViewTwo extends StatelessWidget {
                 child: Text(
                   AppTexts.onboarding2SubT,
                   style: TextStyle(
-                    fontSize: AppSizes.fontMd,
+                    fontSize: AppSizes.font16,
                     color: AppColors.white,
                   ),
                   textAlign: TextAlign.center,

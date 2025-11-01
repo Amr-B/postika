@@ -30,6 +30,11 @@ class RoutesController extends GetxController {
     Get.toNamed(AppRoutes.accessYourAccount);
   }
 
+  // > home routing
+  void goHomeScreen() {
+    Get.toNamed(AppRoutes.homeScreen);
+  }
+
   void goBack() {
     Get.back();
   }

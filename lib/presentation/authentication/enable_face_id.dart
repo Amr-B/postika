@@ -8,7 +8,7 @@ import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 
 import '../../common/elevated_button.dart';
-import '../../controllers/auth_controller.dart';
+import '../../controllers/routes_controller.dart';
 
 class EnableFaceId extends StatefulWidget {
   const EnableFaceId({super.key});
@@ -23,7 +23,7 @@ class _EnableFaceIdState extends State<EnableFaceId> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -42,7 +42,7 @@ class _EnableFaceIdState extends State<EnableFaceId> {
                       Text(
                         AppTexts.enableFaceID,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -53,7 +53,7 @@ class _EnableFaceIdState extends State<EnableFaceId> {
                         child: Text(
                           AppTexts.enableFaceIDSubT,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,

@@ -10,7 +10,7 @@ import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/authentication/widgets/verify_code_widget.dart';
 
 import '../../common/elevated_button.dart';
-import '../../controllers/auth_controller.dart';
+import '../../controllers/routes_controller.dart';
 
 class CreatePinCode extends StatefulWidget {
   const CreatePinCode({super.key});
@@ -25,7 +25,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.authBg,
+      backgroundColor: AppColors.appBackground,
       appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -44,7 +44,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                       Text(
                         AppTexts.createPin,
                         style: TextStyle(
-                          fontSize: AppSizes.fontXxxl,
+                          fontSize: AppSizes.font30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -55,7 +55,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                         child: Text(
                           AppTexts.createPinCodeRules,
                           style: TextStyle(
-                            fontSize: AppSizes.fontSm,
+                            fontSize: AppSizes.font12,
                             color: Colors.grey,
                           ),
                           textAlign: TextAlign.center,
