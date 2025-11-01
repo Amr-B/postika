@@ -21,13 +21,13 @@ class VerifyCodePage extends StatefulWidget {
 }
 
 class _VerifyCodePageState extends State<VerifyCodePage> {
-  final authController = Get.put(AuthController());
+  final routesController = Get.put(RoutesController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.authBg,
-      appBar: AuthAppBar(onTap: authController.goBack),
+      appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -93,7 +93,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: authController.goKeyReasons,
+                                onPressed: routesController.goKeyReasons,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

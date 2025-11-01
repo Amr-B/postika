@@ -18,6 +18,8 @@ class AppTexts {
   static const String createPin = 'Create PIN code';
   static const String enableFaceID = 'Enable face ID';
   static const String accessYourAccount = 'Access your account';
+  static const String accessYourAccountSubT =
+      'Log in to securely access your account and manage your settings easily.';
   static const String loginRegSubT =
       'Customize your profile to personalize your experience and streamline your business operations with ease';
   static const String verifyEmailSubT =

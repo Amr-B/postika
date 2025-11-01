@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:poskita/constants/animations/page_anims.dart';
+import 'package:poskita/presentation/authentication/access_your_account.dart';
 import 'package:poskita/presentation/authentication/create_password.dart';
 import 'package:poskita/presentation/authentication/create_pin_code.dart';
 import 'package:poskita/presentation/authentication/enable_face_id.dart';
@@ -18,6 +19,7 @@ class AppRoutes {
   static const keyReasons = '/keyReasons';
   static const createPinCode = '/createPinCode';
   static const enableFaceId = '/enableFaceId';
+  static const accessYourAccount = '/accessYourAccount';
 
   static final routes = [
     GetPage(
@@ -58,6 +60,11 @@ class AppRoutes {
     GetPage(
       name: enableFaceId,
       page: () => const EnableFaceId(),
+      customTransition: SlideFadeTransition(),
+    ),
+    GetPage(
+      name: accessYourAccount,
+      page: () => const AccessYourAccount(),
       customTransition: SlideFadeTransition(),
     ),
   ];

@@ -22,14 +22,14 @@ class CreatePasswordPage extends StatefulWidget {
 
 class _CreatePasswordPageState extends State<CreatePasswordPage> {
   //  call controller
-  final authController = Get.put(AuthController());
+  final routesController = Get.put(RoutesController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.authBg,
-      appBar: AuthAppBar(onTap: authController.goBack),
+      appBar: AuthAppBar(onTap: routesController.goBack),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -108,7 +108,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: authController.goVerifyEmail,
+                                onPressed: routesController.goVerifyEmail,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

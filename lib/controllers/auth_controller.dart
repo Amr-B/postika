@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:poskita/routes/app_routes.dart';
 
-class AuthController extends GetxController {
+class RoutesController extends GetxController {
   void goCreatePw() {
     Get.toNamed(AppRoutes.createPw);
   }
@@ -24,6 +24,10 @@ class AuthController extends GetxController {
 
   void goEnableFaceID() {
     Get.toNamed(AppRoutes.enableFaceId);
+  }
+
+  void goAccessYourAccount() {
+    Get.toNamed(AppRoutes.accessYourAccount);
   }
 
   void goBack() {

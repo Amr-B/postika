@@ -3,24 +3,27 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
+import 'package:poskita/common/circular_checkbox.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/presentation/authentication/widgets/verify_code_widget.dart';
+import 'package:poskita/controllers/auth_controller.dart';
+import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';
-import '../../controllers/auth_controller.dart';
 
-class CreatePinCode extends StatefulWidget {
-  const CreatePinCode({super.key});
+class AccessYourAccount extends StatefulWidget {
+  const AccessYourAccount({super.key});
 
   @override
-  State<CreatePinCode> createState() => _CreatePinCodeState();
+  State<AccessYourAccount> createState() => _AccessYourAccountState();
 }
 
-class _CreatePinCodeState extends State<CreatePinCode> {
+class _AccessYourAccountState extends State<AccessYourAccount> {
+  //  call controller
   final routesController = Get.put(RoutesController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,12 +40,12 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                   child: Column(
                     children: [
                       // > circular icon
-                      AuthCircularIcon(iconPath: AppImages.authSmPhone),
+                      AuthCircularIcon(iconPath: AppImages.authUser),
                       SizedBox(height: AppSizes.sm),
 
                       // > title
                       Text(
-                        AppTexts.createPin,
+                        AppTexts.accessYourAccount,
                         style: TextStyle(
                           fontSize: AppSizes.fontXxxl,
                           fontWeight: FontWeight.bold,
@@ -53,7 +56,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: AppSizes.p16),
                         child: Text(
-                          AppTexts.createPinCodeRules,
+                          AppTexts.accessYourAccountSubT,
                           style: TextStyle(
                             fontSize: AppSizes.fontSm,
                             color: Colors.grey,
@@ -63,7 +66,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                       ),
                       SizedBox(height: AppSizes.lg),
 
-                      // > OTP field
+                      // > fields
                       Expanded(
                         child: Padding(
                           padding:
@@ -71,15 +74,31 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // > first name
-                              OtpInput(
-                                radius: AppSizes.radius50,
-                                width: AppSizes.contMd,
-                                height: AppSizes.contMd,
-                              ).animate().fade(duration: 300.ms).slideX(
-                                  duration: 500.ms, curve: Curves.easeInOut),
+                              // > password
+                              AppTextField(
+                                      hint: "email", icon: Icons.email_outlined)
+                                  .animate()
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
 
+                              // > confirm password
+                              AppTextField(
+                                      hint: "Password",
+                                      icon: Icons.lock_outline)
+                                  .animate(delay: 100.ms)
+                                  .fade(duration: 300.ms)
+                                  .slideX(
+                                      duration: 500.ms,
+                                      curve: Curves.easeInOut),
+                              SizedBox(height: AppSizes.md),
+
+                              // > password rules
+                              CircularCheckbox(
+                                label: 'Remember Me',
+                              ),
                               Spacer(),
 
                               // > continue button
@@ -87,7 +106,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: routesController.goEnableFaceID,
+                                onPressed: routesController.goVerifyEmail,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

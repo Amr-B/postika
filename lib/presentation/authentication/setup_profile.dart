@@ -20,7 +20,7 @@ class SetupProfilePage extends StatefulWidget {
 }
 
 class _SetupProfilePageState extends State<SetupProfilePage> {
-  final authController = Get.put(AuthController());
+  final routesController = Get.put(RoutesController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +105,7 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: authController.goCreatePw,
+                                onPressed: routesController.goCreatePw,
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),
