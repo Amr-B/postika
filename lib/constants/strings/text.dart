@@ -54,6 +54,9 @@ class AppTexts {
   static const String seamlessTransSubT =
       "Enable quick and efficient payment processing reducing wait times for customers and improving transaction speed";
 
+  static const String createPinCodeRules =
+      "Set up 4-digits code to keep your account safe and ensure only you can access it, This extra layer of security protects your data.";
+
   // >> actions << //
   static const String skip = 'Skip';
   static const String next = 'Next';

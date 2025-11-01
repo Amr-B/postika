@@ -3,7 +3,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
-import 'package:poskita/common/field_info.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
@@ -13,14 +12,14 @@ import 'package:poskita/presentation/authentication/widgets/verify_code_widget.d
 import '../../common/elevated_button.dart';
 import '../../controllers/auth_controller.dart';
 
-class VerifyCodePage extends StatefulWidget {
-  const VerifyCodePage({super.key});
+class CreatePinCode extends StatefulWidget {
+  const CreatePinCode({super.key});
 
   @override
-  State<VerifyCodePage> createState() => _VerifyCodePageState();
+  State<CreatePinCode> createState() => _CreatePinCodeState();
 }
 
-class _VerifyCodePageState extends State<VerifyCodePage> {
+class _CreatePinCodeState extends State<CreatePinCode> {
   final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
 
                       // > title
                       Text(
-                        AppTexts.enterVerificationCode,
+                        AppTexts.createPin,
                         style: TextStyle(
                           fontSize: AppSizes.fontXxxl,
                           fontWeight: FontWeight.bold,
@@ -54,7 +53,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: AppSizes.p16),
                         child: Text(
-                          AppTexts.enterCodeSubT,
+                          AppTexts.createPinCodeRules,
                           style: TextStyle(
                             fontSize: AppSizes.fontSm,
                             color: Colors.grey,
@@ -75,17 +74,12 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                               // > first name
                               OtpInput(
                                 radius: AppSizes.radius50,
-                                width: AppSizes.contXl,
-                                height: AppSizes.contSm,
+                                width: AppSizes.contMd,
+                                height: AppSizes.contMd,
                               ).animate().fade(duration: 300.ms).slideX(
                                   duration: 500.ms, curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
 
-                              FieldInfo(
-                                info: AppTexts.verifyCodeRules,
-                                fontSize: AppSizes.fontMd,
-                                textAlign: TextAlign.center,
-                              ),
                               Spacer(),
 
                               // > continue button
@@ -93,7 +87,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 width: double.infinity,
                                 bgColor: AppColors.buton1,
                                 titleColor: Colors.white,
-                                onPressed: authController.goKeyReasons,
+                                onPressed: () {},
                                 title: AppTexts.continu,
                               ),
                               SizedBox(height: AppSizes.xl),

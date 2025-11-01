@@ -97,7 +97,7 @@ class _KeyReasonsPageState extends State<KeyReasonsPage> {
                           width: double.infinity,
                           bgColor: AppColors.buton1,
                           titleColor: Colors.white,
-                          onPressed: () {},
+                          onPressed: authController.goCreatePinCode,
                           title: AppTexts.continu,
                         ),
 

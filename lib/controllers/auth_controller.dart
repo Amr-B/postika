@@ -18,6 +18,10 @@ class AuthController extends GetxController {
     Get.toNamed(AppRoutes.keyReasons);
   }
 
+  void goCreatePinCode() {
+    Get.toNamed(AppRoutes.createPinCode);
+  }
+
   void goBack() {
     Get.back();
   }
