@@ -22,6 +22,10 @@ class AuthController extends GetxController {
     Get.toNamed(AppRoutes.createPinCode);
   }
 
+  void goEnableFaceID() {
+    Get.toNamed(AppRoutes.enableFaceId);
+  }
+
   void goBack() {
     Get.back();
   }

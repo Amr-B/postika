@@ -9,4 +9,5 @@ class AppImages {
   static const String authSecure = 'assets/icons/auth-secure.png';
   static const String authLock = 'assets/icons/auth-lock.png';
   static const String authFaceID = 'assets/icons/auth-faceid.png';
+  static const String faceScanGif = 'assets/icons/face-scan.gif';
 }
