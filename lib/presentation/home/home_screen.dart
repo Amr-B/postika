@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/common/elevated_button.dart';
 import 'package:poskita/common/home_app_bar.dart';
-import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/widgets/home_search_bar.dart';
 import 'package:poskita/presentation/home/widgets/in_order_card.dart';
+import 'package:poskita/presentation/home/widgets/sales_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -56,6 +55,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: AppSizes.md),
+
+            // Sale Banner
+            SalesContainer()
           ],
         ),
       ),
