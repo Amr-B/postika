@@ -74,8 +74,8 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                               // > first name
                               OtpInput(
                                 radius: AppSizes.radius50,
-                                width: AppSizes.contMd,
-                                height: AppSizes.contMd,
+                                width: AppSizes.cont65,
+                                height: AppSizes.cont65,
                               ).animate().fade(duration: 300.ms).slideX(
                                   duration: 500.ms, curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
@@ -85,7 +85,7 @@ class _CreatePinCodeState extends State<CreatePinCode> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goEnableFaceID,
                                 title: AppTexts.continu,

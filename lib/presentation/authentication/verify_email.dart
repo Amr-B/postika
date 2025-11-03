@@ -92,7 +92,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                               AppElevatedButton(
                                 onPressed: routesController.goVerifyCode,
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 title: AppTexts.continu,
                               ),

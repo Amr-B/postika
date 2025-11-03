@@ -9,10 +9,23 @@ class AppSizes {
   static const double xxxl = 85.0;
   static const double xxxxl = 96.0;
 
+  // > icon sizes
+  static const double icon4 = 4.0;
+  static const double icon8 = 8.0;
+  static const double icon10 = 10.0;
+  static const double icon14 = 14.0;
+  static const double icon16 = 16.0;
+  static const double icon18 = 18.0;
+  static const double icon20 = 20.0;
+  static const double icon22 = 22.0;
+  static const double icon24 = 24.0;
+  static const double icon26 = 26.0;
+
   // padding
   static const double p5 = 5.0;
   static const double p8 = 8.0;
   static const double p16 = 16.0;
+  static const double p18 = 18.0;
   static const double p20 = 20.0;
   static const double p24 = 24.0;
   static const double p26 = 26.0;
@@ -32,13 +45,14 @@ class AppSizes {
   static const double imgXxxxl = 400.0;
 
   // container sizes
-  static const double contXsm = 25.0;
-  static const double contXs2 = 35.0;
-  static const double contSm = 50.0;
-  static const double contMd = 65.0;
-  static const double contLg = 75.0;
-  static const double contXl = 100.0;
-  static const double contXxL = 125.0;
+  static const double cont25 = 25.0;
+  static const double cont35 = 35.0;
+  static const double cont40 = 35.0;
+  static const double cont50 = 50.0;
+  static const double cont65 = 65.0;
+  static const double cont75 = 75.0;
+  static const double cont100 = 100.0;
+  static const double cont125 = 125.0;
 
   // Border radius
   static const double radius8 = 8.0;

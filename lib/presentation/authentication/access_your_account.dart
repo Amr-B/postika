@@ -104,7 +104,7 @@ class _AccessYourAccountState extends State<AccessYourAccount> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goHomeScreen,
                                 title: AppTexts.continu,

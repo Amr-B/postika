@@ -30,8 +30,8 @@ class KeyReasonCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  width: AppSizes.contXs2,
-                  height: AppSizes.contXs2,
+                  width: AppSizes.cont35,
+                  height: AppSizes.cont35,
                   decoration: BoxDecoration(
                     color: AppColors.lighIconBlue,
                     borderRadius: BorderRadius.circular(AppSizes.radius50),

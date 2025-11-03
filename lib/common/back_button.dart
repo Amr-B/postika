@@ -13,8 +13,8 @@ class AppBackButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: AppSizes.contMd,
-        height: AppSizes.contMd,
+        width: AppSizes.cont65,
+        height: AppSizes.cont65,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(50),

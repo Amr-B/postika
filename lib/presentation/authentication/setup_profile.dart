@@ -103,7 +103,7 @@ class _SetupProfilePageState extends State<SetupProfilePage> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goCreatePw,
                                 title: AppTexts.continu,

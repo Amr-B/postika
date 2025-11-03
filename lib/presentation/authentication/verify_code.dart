@@ -75,8 +75,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                               // > first name
                               OtpInput(
                                 radius: AppSizes.radius50,
-                                width: AppSizes.contXl,
-                                height: AppSizes.contSm,
+                                width: AppSizes.cont100,
+                                height: AppSizes.cont50,
                               ).animate().fade(duration: 300.ms).slideX(
                                   duration: 500.ms, curve: Curves.easeInOut),
                               SizedBox(height: AppSizes.lg),
@@ -91,7 +91,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goKeyReasons,
                                 title: AppTexts.continu,

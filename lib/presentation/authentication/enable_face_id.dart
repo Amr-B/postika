@@ -79,7 +79,7 @@ class _EnableFaceIdState extends State<EnableFaceId> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goAccessYourAccount,
                                 title: AppTexts.continu,

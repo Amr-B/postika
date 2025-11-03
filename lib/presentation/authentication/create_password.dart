@@ -106,7 +106,7 @@ class _CreatePasswordPageState extends State<CreatePasswordPage> {
                               // > continue button
                               AppElevatedButton(
                                 width: double.infinity,
-                                bgColor: AppColors.buton1,
+                                bgColor: AppColors.DBlue,
                                 titleColor: Colors.white,
                                 onPressed: routesController.goVerifyEmail,
                                 title: AppTexts.continu,

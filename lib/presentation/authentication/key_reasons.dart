@@ -95,7 +95,7 @@ class _KeyReasonsPageState extends State<KeyReasonsPage> {
 
                         AppElevatedButton(
                           width: double.infinity,
-                          bgColor: AppColors.buton1,
+                          bgColor: AppColors.DBlue,
                           titleColor: Colors.white,
                           onPressed: routesController.goCreatePinCode,
                           title: AppTexts.continu,

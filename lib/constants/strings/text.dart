@@ -1,4 +1,7 @@
 class AppTexts {
+  // >> commons << //
+  static const String search = 'Search';
+
   // >> titles & subs << //
   static const String appName = 'Postika';
   static const String onboardingTitle1 = 'Grow Your Business';
@@ -68,6 +71,7 @@ class AppTexts {
   static const String ok = 'Ok';
 
   // >> Home & appbar <<
+  static const String searchFoods = 'Search Foods...';
   static const String hello = 'Hello!';
   static const String dummyName = 'Dummy User';
 }
