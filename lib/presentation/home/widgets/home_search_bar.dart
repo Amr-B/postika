@@ -39,7 +39,7 @@ class HomeSearchBar extends StatelessWidget {
                 onPressed: () {
                   // > opens to filter bottom sheet (backend needed)
                 },
-              )
+              ),
             ],
           ),
         ),

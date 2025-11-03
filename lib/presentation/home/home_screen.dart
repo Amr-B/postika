@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:poskita/common/elevated_button.dart';
 import 'package:poskita/common/home_app_bar.dart';
+import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/widgets/home_search_bar.dart';
+import 'package:poskita/presentation/home/widgets/in_order_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSizes.p24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // > space between appbar and home widgets
             SizedBox(height: AppSizes.md),
@@ -28,7 +32,30 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 // > navigates to search page
               },
-            )
+            ),
+            SizedBox(height: AppSizes.lg),
+            Text(
+              'Order List',
+              style: TextStyle(
+                fontSize: AppSizes.font18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: AppSizes.sm),
+
+            // > order list
+            SizedBox(
+              height: AppSizes.cont125,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: 5,
+                itemBuilder: (context, index) => InOrderCart(),
+                separatorBuilder: (_, __) => SizedBox(
+                  width: AppSizes.md,
+                ),
+              ),
+            ),
+            SizedBox(height: AppSizes.md),
           ],
         ),
       ),

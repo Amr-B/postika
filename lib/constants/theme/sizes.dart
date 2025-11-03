@@ -24,6 +24,8 @@ class AppSizes {
   // padding
   static const double p5 = 5.0;
   static const double p8 = 8.0;
+  static const double p10 = 10.0;
+  static const double p12 = 12.0;
   static const double p16 = 16.0;
   static const double p18 = 18.0;
   static const double p20 = 20.0;
@@ -53,6 +55,12 @@ class AppSizes {
   static const double cont75 = 75.0;
   static const double cont100 = 100.0;
   static const double cont125 = 125.0;
+  static const double cont180 = 180.0;
+  static const double cont200 = 200.0;
+  static const double cont250 = 250.0;
+  static const double cont300 = 300.0;
+  static const double cont350 = 350.0;
+  static const double cont400 = 400.0;
 
   // Border radius
   static const double radius8 = 8.0;
