@@ -55,6 +55,9 @@ class AppSizes {
   static const double cont75 = 75.0;
   static const double cont100 = 100.0;
   static const double cont125 = 125.0;
+  static const double cont150 = 150.0;
+  static const double cont170 = 170.0;
+  static const double cont175 = 175.0;
   static const double cont180 = 180.0;
   static const double cont200 = 200.0;
   static const double cont250 = 250.0;
@@ -78,6 +81,8 @@ class AppSizes {
   static const double iconLg = 32.0;
 
   // Font sizes
+  static const double font8 = 8.0;
+  static const double font10 = 10.0;
   static const double font12 = 12.0;
   static const double font14 = 14.0;
   static const double font16 = 16.0;
@@ -88,4 +93,9 @@ class AppSizes {
   static const double font26 = 26.0;
   static const double font28 = 28.0;
   static const double font30 = 30.0;
+  static const double font32 = 32.0;
+  static const double font34 = 34.0;
+  static const double font36 = 36.0;
+  static const double font38 = 38.0;
+  static const double font40 = 40.0;
 }

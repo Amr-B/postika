@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -11,4 +13,5 @@ class AppColors {
   static const Color gradientDeepBlue = Color(0xFF0C3D91);
   static const Color gradientMidBlue = Color(0xFF1D7CC0);
   static const Color gradientTeal = Color(0xFF2CC2C2);
+  static const Color lightBlue = Color(0xFFeef5ff);
 }

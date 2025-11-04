@@ -76,4 +76,7 @@ class AppTexts {
   static const String dummyName = 'Dummy User';
   static const String breakFastMenu = 'Breakfast Menu';
   static const String inKitchen = 'In Kitchen';
+  static const String totalSales = 'Total Sales \n Revenue';
+  static const String totalProductSold = 'Total Products \n Sold';
+  static const String vsLastMonth = 'vs last month';
 }
