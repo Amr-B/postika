@@ -79,4 +79,6 @@ class AppTexts {
   static const String totalSales = 'Total Sales \n Revenue';
   static const String totalProductSold = 'Total Products \n Sold';
   static const String vsLastMonth = 'vs last month';
+  static const String transactions = 'Transactions';
+  static const String latestTransactions = 'Latest Transactions';
 }

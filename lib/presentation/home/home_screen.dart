@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:poskita/common/home_app_bar.dart';
 import 'package:poskita/constants/strings/images.dart';
@@ -10,6 +8,8 @@ import 'package:poskita/presentation/home/widgets/home_search_bar.dart';
 import 'package:poskita/presentation/home/widgets/in_order_card.dart';
 import 'package:poskita/presentation/home/widgets/sales_container.dart';
 import 'package:poskita/presentation/home/widgets/total_sales_card.dart';
+import 'package:poskita/presentation/home/widgets/transaction_card.dart';
+import 'package:poskita/presentation/home/widgets/transaction_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -52,12 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: AppSizes.cont125,
                 child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
                   itemCount: 5,
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => InOrderCart(),
-                  separatorBuilder: (_, __) => SizedBox(
-                    width: AppSizes.md,
-                  ),
+                  separatorBuilder: (_, __) => SizedBox(width: AppSizes.md),
                 ),
               ),
               SizedBox(height: AppSizes.md),
@@ -68,23 +66,35 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // > total sales & total product
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TotalCard(
-                    title: AppTexts.totalSales,
-                    amount: '98,439',
-                    saleValue: '+ 2.4%',
-                    image: AppImages.dollar,
+                  Expanded(
+                    child: TotalCard(
+                      title: AppTexts.totalSales,
+                      amount: '98,439',
+                      saleValue: '+ 2.4%',
+                      image: AppImages.dollar,
+                    ),
                   ),
-                  TotalCard(
-                    title: AppTexts.totalProductSold,
-                    amount: '6,264',
-                    saleValue: '+ 2.4%',
-                    image: AppImages.box,
+                  SizedBox(width: AppSizes.sm),
+
+                  // > total Products
+                  Expanded(
+                    child: TotalCard(
+                      title: AppTexts.totalProductSold,
+                      amount: '6,264',
+                      saleValue: '+ 2.4%',
+                      image: AppImages.box,
+                    ),
                   ),
                 ],
               ),
-              SizedBox(height: AppSizes.md),
+
+              // > transaction
+              TransactionsWidgets(title: AppTexts.transactions),
+              TransactionsWidgets(title: AppTexts.latestTransactions),
+
+              // > products in low stock
             ],
           ),
         ),

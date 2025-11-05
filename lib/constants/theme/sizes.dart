@@ -21,6 +21,20 @@ class AppSizes {
   static const double icon24 = 24.0;
   static const double icon26 = 26.0;
 
+// > MediaQuery percentage factors
+  static const double m10 = 0.10; // small icons, thumbnails
+  static const double m15 = 0.15; // small illustrations
+  static const double m20 = 0.20; // smaller onboarding graphics
+  static const double m25 = 0.25;
+  static const double m30 = 0.30; // typical logo or header image
+  static const double m40 = 0.40;
+  static const double m50 = 0.50; // half screen (cards, modals)
+  static const double m60 = 0.60; // larger images or illustrations
+  static const double m70 = 0.70;
+  static const double m80 = 0.80; // wide banners
+  static const double m90 = 0.90;
+  static const double m100 = 1.00; // full width/height
+
   // padding
   static const double p5 = 5.0;
   static const double p8 = 8.0;

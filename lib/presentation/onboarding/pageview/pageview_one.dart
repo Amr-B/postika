@@ -12,6 +12,7 @@ class PageViewOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Center(
         child: Padding(
@@ -19,6 +20,7 @@ class PageViewOne extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // > app title
               Text(
                 AppTexts.appName,
                 style: TextStyle(
@@ -29,6 +31,8 @@ class PageViewOne extends StatelessWidget {
                 ),
               ),
               SizedBox(height: AppSizes.md),
+
+              // > slogan
               Text(
                 AppTexts.onboardingTitle1,
                 style: TextStyle(
@@ -37,11 +41,16 @@ class PageViewOne extends StatelessWidget {
                 ),
               ),
               SizedBox(height: AppSizes.md),
+
+              // > image
               Image.asset(
                 AppImages.onboarding1,
-                width: AppSizes.imgXxl,
+                width: screenWidth * AppSizes.m80,
+                // width: AppSizes.imgXxl,
               ),
               SizedBox(height: AppSizes.md),
+
+              // > subtitle
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
                 child: Text(

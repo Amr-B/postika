@@ -21,8 +21,10 @@ class TotalCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      width: AppSizes.cont175,
+      width: screenWidth * 0.42,
+      // width: AppSizes.cont175,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(AppSizes.radius30),

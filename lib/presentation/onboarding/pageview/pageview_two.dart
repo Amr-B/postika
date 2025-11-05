@@ -12,6 +12,7 @@ class PageViewTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Center(
         child: Padding(
@@ -39,7 +40,7 @@ class PageViewTwo extends StatelessWidget {
               SizedBox(height: AppSizes.md),
               Image.asset(
                 AppImages.onboarding2,
-                width: AppSizes.imgXxl,
+                width: screenWidth * AppSizes.m80,
               ),
               SizedBox(height: AppSizes.md),
               Padding(
