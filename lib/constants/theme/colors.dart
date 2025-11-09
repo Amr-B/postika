@@ -14,4 +14,6 @@ class AppColors {
   static const Color gradientMidBlue = Color(0xFF1D7CC0);
   static const Color gradientTeal = Color(0xFF2CC2C2);
   static const Color lightBlue = Color(0xFFeef5ff);
+  static const Color red = Colors.red;
+  static const Color lightRed = Color.fromARGB(255, 255, 212, 209);
 }

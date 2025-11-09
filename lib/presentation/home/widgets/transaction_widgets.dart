@@ -19,7 +19,7 @@ class TransactionsWidgets extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: AppSizes.font16,
+            fontSize: AppSizes.font18,
             fontWeight: FontWeight.bold,
           ),
         ),

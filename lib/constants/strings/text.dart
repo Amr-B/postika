@@ -81,4 +81,21 @@ class AppTexts {
   static const String vsLastMonth = 'vs last month';
   static const String transactions = 'Transactions';
   static const String latestTransactions = 'Latest Transactions';
+
+  static const String productInLowStock = 'Product In Low Stock';
+  static const String wholeWheatLoaf = 'Whole Wheat Loaf';
+  static const String wwlSubT = 'Nutritious, fiber-rich, and wholesome loaves.';
+  static const String frostedBlissDonut = 'Frosted Bliss Donut';
+  static const String fbdSubT =
+      'Soft blue donut with vibrant pink spinkles delight.';
+  static const String middleSlicedBread = 'Middle Sliced Bread';
+  static const String msbSubT =
+      'Soft bread split for delicious filling inside.';
+
+  static const String bananaPancake = 'Banana Pancake';
+  static const String bpSubT =
+      'Fluffy pancakes with sweet banana slices inside.';
+  static const String sweetBerryMuffin = 'Sweet Berry Muffin';
+  static const String sbmSubT =
+      'Soft muffin filled with free juicy blueberrys.';
 }

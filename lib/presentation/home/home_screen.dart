@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:poskita/common/home_app_bar.dart';
-import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/presentation/home/temp/temp_product_containers.dart';
 import 'package:poskita/presentation/home/widgets/home_search_bar.dart';
-import 'package:poskita/presentation/home/widgets/in_order_card.dart';
+import 'package:poskita/presentation/home/widgets/in_order_list.dart';
 import 'package:poskita/presentation/home/widgets/sales_container.dart';
-import 'package:poskita/presentation/home/widgets/total_sales_card.dart';
-import 'package:poskita/presentation/home/widgets/transaction_card.dart';
+import 'package:poskita/presentation/home/widgets/total_status.dart';
 import 'package:poskita/presentation/home/widgets/transaction_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,6 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppColors.appBackground,
       appBar: HomeAppBar(),
@@ -38,26 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   // > navigates to search page
                 },
               ),
-              SizedBox(height: AppSizes.lg),
-              Text(
-                'Order List',
-                style: TextStyle(
-                  fontSize: AppSizes.font18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: AppSizes.sm),
 
-              // > order list
-              SizedBox(
-                height: AppSizes.cont125,
-                child: ListView.separated(
-                  itemCount: 5,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => InOrderCart(),
-                  separatorBuilder: (_, __) => SizedBox(width: AppSizes.md),
-                ),
-              ),
+              // > in order List
+              InOrderList(),
               SizedBox(height: AppSizes.md),
 
               // Sale Banner
@@ -65,36 +48,22 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: AppSizes.md),
 
               // > total sales & total product
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: TotalCard(
-                      title: AppTexts.totalSales,
-                      amount: '98,439',
-                      saleValue: '+ 2.4%',
-                      image: AppImages.dollar,
-                    ),
-                  ),
-                  SizedBox(width: AppSizes.sm),
-
-                  // > total Products
-                  Expanded(
-                    child: TotalCard(
-                      title: AppTexts.totalProductSold,
-                      amount: '6,264',
-                      saleValue: '+ 2.4%',
-                      image: AppImages.box,
-                    ),
-                  ),
-                ],
-              ),
+              TotalStatus(),
 
               // > transaction
               TransactionsWidgets(title: AppTexts.transactions),
               TransactionsWidgets(title: AppTexts.latestTransactions),
+              SizedBox(height: AppSizes.md),
+              Text(
+                'Product in Low Stock',
+                style: TextStyle(
+                  fontSize: AppSizes.font18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
               // > products in low stock
+              TempProductContainers()
             ],
           ),
         ),

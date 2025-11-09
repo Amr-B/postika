@@ -13,4 +13,11 @@ class AppImages {
   static const String loading = 'assets/icons/loading.gif';
   static const String dollar = 'assets/icons/dollar.png';
   static const String box = 'assets/icons/box.png';
+
+  // > home
+  static const String wheatLoaf = 'assets/images/home/wheat-loaf.png';
+  static const String muffin = 'assets/images/home/muffin.png';
+  static const String pancake = 'assets/images/home/pancake.png';
+  static const String bread = 'assets/images/home/bread.png';
+  static const String donut = 'assets/images/home/donut.png';
 }

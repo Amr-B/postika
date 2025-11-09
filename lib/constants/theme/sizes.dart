@@ -22,21 +22,35 @@ class AppSizes {
   static const double icon26 = 26.0;
 
 // > MediaQuery percentage factors
-  static const double m10 = 0.10; // small icons, thumbnails
-  static const double m15 = 0.15; // small illustrations
-  static const double m20 = 0.20; // smaller onboarding graphics
+
+  static const double m02 = 0.02;
+  static const double m03 = 0.03;
+  static const double m04 = 0.04;
+  static const double m05 = 0.05;
+  static const double m06 = 0.06;
+  static const double m07 = 0.07;
+  static const double m08 = 0.08;
+
+  static const double m10 = 0.10;
+  static const double m15 = 0.15;
+  static const double m20 = 0.20;
   static const double m25 = 0.25;
-  static const double m30 = 0.30; // typical logo or header image
+  static const double m30 = 0.30;
+  static const double m34 = 0.34;
   static const double m40 = 0.40;
-  static const double m50 = 0.50; // half screen (cards, modals)
-  static const double m60 = 0.60; // larger images or illustrations
+  static const double m42 = 0.42;
+  static const double m44 = 0.44;
+  static const double m46 = 0.46;
+  static const double m48 = 0.48;
+  static const double m50 = 0.50;
+  static const double m60 = 0.60;
   static const double m70 = 0.70;
-  static const double m80 = 0.80; // wide banners
+  static const double m80 = 0.80;
   static const double m90 = 0.90;
-  static const double m100 = 1.00; // full width/height
+  static const double m100 = 1.00;
 
   // padding
-  static const double p5 = 5.0;
+  static const double p4 = 4.0;
   static const double p8 = 8.0;
   static const double p10 = 10.0;
   static const double p12 = 12.0;
@@ -67,6 +81,7 @@ class AppSizes {
   static const double cont50 = 50.0;
   static const double cont65 = 65.0;
   static const double cont75 = 75.0;
+  static const double cont85 = 85.0;
   static const double cont100 = 100.0;
   static const double cont125 = 125.0;
   static const double cont150 = 150.0;
