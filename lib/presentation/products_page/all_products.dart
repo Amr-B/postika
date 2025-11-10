@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:poskita/common/app_search_bar.dart';
-import 'package:poskita/common/back_button.dart';
-import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/presentation/home/temp/products_gridview.dart';
+import 'package:poskita/presentation/products_page/widgets/products_page_appbar.dart';
 
 class AllProductsPage extends StatelessWidget {
   const AllProductsPage({super.key});
@@ -12,27 +12,19 @@ class AllProductsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.appBackground,
-      appBar: AppBar(
-        backgroundColor: AppColors.appBackground,
-        centerTitle: true,
-        leading: AppBackButton(onTap: () {}),
-        title: Text(
-          AppTexts.allProducts,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      appBar: ProductsPageAppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSizes.p20),
+          padding: const EdgeInsets.symmetric(horizontal: AppSizes.p16),
           child: Column(
             children: [
               SizedBox(height: AppSizes.xl),
               // > search bar & filter button
               AppSearchBar(),
+              SizedBox(height: AppSizes.md),
 
               // > products
+              ProductsGridView()
             ],
           ),
         ),
