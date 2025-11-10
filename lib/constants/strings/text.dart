@@ -98,4 +98,8 @@ class AppTexts {
   static const String sweetBerryMuffin = 'Sweet Berry Muffin';
   static const String sbmSubT =
       'Soft muffin filled with free juicy blueberrys.';
+
+  // >>> all products page <<< //
+  static const String allProducts = 'All Products';
+  static const String seeAll = 'See All';
 }

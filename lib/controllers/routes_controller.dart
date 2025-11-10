@@ -35,6 +35,10 @@ class RoutesController extends GetxController {
     Get.toNamed(AppRoutes.homeScreen);
   }
 
+  void goAllProductsPage() {
+    Get.toNamed(AppRoutes.allProductsPage);
+  }
+
   void goBack() {
     Get.back();
   }

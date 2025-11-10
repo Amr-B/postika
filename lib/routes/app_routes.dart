@@ -9,6 +9,7 @@ import 'package:poskita/presentation/authentication/setup_profile.dart';
 import 'package:poskita/presentation/authentication/verify_code.dart';
 import 'package:poskita/presentation/authentication/verify_email.dart';
 import 'package:poskita/presentation/onboarding/onboarding.dart';
+import 'package:poskita/presentation/products_page/all_products.dart';
 
 import '../presentation/home/home_screen.dart';
 
@@ -26,6 +27,7 @@ class AppRoutes {
 
   // home routes
   static const homeScreen = '/homeScreen';
+  static const allProductsPage = '/allProductsPage';
 
   static final routes = [
     // > authentication routes
@@ -79,6 +81,12 @@ class AppRoutes {
     GetPage(
       name: homeScreen,
       page: () => const HomeScreen(),
+      customTransition: SlideFadeTransition(),
+    ),
+
+    GetPage(
+      name: allProductsPage,
+      page: () => const AllProductsPage(),
       customTransition: SlideFadeTransition(),
     ),
   ];
