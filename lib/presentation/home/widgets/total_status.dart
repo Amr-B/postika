@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/sizes.dart';
@@ -21,7 +22,10 @@ class TotalStatus extends StatelessWidget {
             saleValue: '+ 2.4%',
             image: AppImages.dollar,
           ),
-        ),
+        )
+            .animate()
+            .fade(duration: 300.ms)
+            .slideX(duration: 500.ms, delay: 100.ms, curve: Curves.easeInOut),
         SizedBox(width: AppSizes.sm),
 
         // > total Products
@@ -32,7 +36,10 @@ class TotalStatus extends StatelessWidget {
             saleValue: '+ 2.4%',
             image: AppImages.box,
           ),
-        ),
+        )
+            .animate()
+            .fade(duration: 300.ms)
+            .slideX(duration: 500.ms, delay: 200.ms, curve: Curves.easeInOut),
       ],
     );
   }

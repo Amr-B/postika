@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/widgets/transaction_card.dart';
 
@@ -32,6 +33,9 @@ class TransactionsWidgets extends StatelessWidget {
           separatorBuilder: (_, __) => SizedBox(height: AppSizes.sm),
         ),
       ],
-    );
+    )
+        .animate()
+        .fade(duration: 300.ms)
+        .slideY(duration: 500.ms, curve: Curves.easeInOut);
   }
 }

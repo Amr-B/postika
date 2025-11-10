@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/sizes.dart';
@@ -50,6 +51,9 @@ class TempProductContainers extends StatelessWidget {
           price: item['price']!,
         );
       },
-    );
+    )
+        .animate()
+        .fade(duration: 300.ms)
+        .slideY(duration: 500.ms, delay: 300.ms, curve: Curves.easeInOut);
   }
 }

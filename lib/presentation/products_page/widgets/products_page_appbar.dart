@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:get/get.dart';
+
+import '../../../controllers/routes_controller.dart';
 
 class ProductsPageAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -11,9 +14,11 @@ class ProductsPageAppBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
+    final routesController = Get.put(RoutesController());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.p16),
       child: AppBar(
+        surfaceTintColor: AppColors.appBackground,
         backgroundColor: AppColors.appBackground,
         centerTitle: true,
         leading: Container(
@@ -24,7 +29,7 @@ class ProductsPageAppBar extends StatelessWidget
             borderRadius: BorderRadius.circular(50),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: routesController.goBack,
             icon: Icon(Icons.arrow_back),
           ),
         ),

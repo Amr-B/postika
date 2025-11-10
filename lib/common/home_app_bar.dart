@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/strings/images.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
@@ -16,6 +17,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.only(
               top: AppSizes.p20, left: AppSizes.p16, right: AppSizes.p16),
           child: AppBar(
+            surfaceTintColor: AppColors.appBackground,
             elevation: 0,
             backgroundColor: AppColors.appBackground,
             automaticallyImplyLeading: false,
@@ -49,7 +51,10 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-    );
+    )
+        .animate()
+        .fade(duration: 300.ms)
+        .slideY(duration: 500.ms, curve: Curves.easeInOut);
   }
 
   @override

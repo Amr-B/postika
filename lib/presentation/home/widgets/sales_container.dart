@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/constants/theme/colors.dart';
 import 'package:poskita/constants/theme/sizes.dart';
 
@@ -80,6 +81,9 @@ class SalesContainer extends StatelessWidget {
           ],
         ),
       ),
-    );
+    )
+        .animate()
+        .fade(duration: 300.ms)
+        .slideX(duration: 500.ms, curve: Curves.easeInOut);
   }
 }
