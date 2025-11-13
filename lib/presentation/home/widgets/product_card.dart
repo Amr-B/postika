@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poskita/presentation/products_page/widgets/cart_toggle.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -70,22 +71,7 @@ class ProductCard extends StatelessWidget {
                         color: Color(0xFF0C3D91),
                       ),
                     ),
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF0C3D91),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.shopping_cart_outlined,
-                          color: Colors.white,
-                          size: 22,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ),
+                    const CartToggleButton(),
                   ],
                 ),
               ],

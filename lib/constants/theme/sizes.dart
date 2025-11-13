@@ -75,7 +75,9 @@ class AppSizes {
   static const double imgXxxxl = 400.0;
 
   // container sizes
+  static const double cont20 = 20.0;
   static const double cont25 = 25.0;
+  static const double cont30 = 30.0;
   static const double cont35 = 35.0;
   static const double cont40 = 35.0;
   static const double cont50 = 50.0;

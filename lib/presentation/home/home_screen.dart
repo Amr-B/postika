@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/common/home_app_bar.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/colors.dart';
