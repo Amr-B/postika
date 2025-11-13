@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:poskita/constants/strings/text.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/qnt_provider.dart';
+import 'package:provider/provider.dart';
 import '../../../constants/strings/images.dart';
 import '../widgets/product_card.dart';
 
@@ -25,11 +27,14 @@ class ProductsGridView extends StatelessWidget {
             : AppSizes.m70, // 0.70 for tablets
       ),
       itemBuilder: (context, index) {
-        return const ProductCard(
-          title: AppTexts.bananaPancake,
-          subTitle: AppTexts.bpSubT,
-          image: AppImages.pancake,
-          price: '6.00',
+        return ChangeNotifierProvider(
+          create: (_) => QntProvider(),
+          child: const ProductCard(
+            title: AppTexts.bananaPancake,
+            subTitle: AppTexts.bpSubT,
+            image: AppImages.pancake,
+            price: '6.00',
+          ),
         );
       },
     );

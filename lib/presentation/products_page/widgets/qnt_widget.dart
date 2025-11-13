@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/qnt_provider.dart';
+import 'package:provider/provider.dart';
 
 class QntWidget extends StatelessWidget {
   const QntWidget({
@@ -8,6 +10,7 @@ class QntWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final qntProvider = context.watch<QntProvider>();
     return Container(
       padding: EdgeInsets.symmetric(horizontal: AppSizes.p4),
       width: AppSizes.cont75,
@@ -25,9 +28,7 @@ class QntWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSizes.radius16),
             child: InkWell(
               borderRadius: BorderRadius.circular(15),
-              onTap: () {
-                // > Increament method
-              },
+              onTap: () => qntProvider.increament(context),
               child: SizedBox(
                 width: AppSizes.cont20,
                 height: AppSizes.cont20,
@@ -38,7 +39,7 @@ class QntWidget extends StatelessWidget {
           ),
 
           Text(
-            '1',
+            '${qntProvider.quantity}',
             style: TextStyle(
               fontSize: AppSizes.font18,
             ),
@@ -50,9 +51,7 @@ class QntWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSizes.radius16),
             child: InkWell(
               borderRadius: BorderRadius.circular(AppSizes.radius16),
-              onTap: () {
-                // > Decreament method
-              },
+              onTap: () => qntProvider.decrement(context),
               child: SizedBox(
                 width: AppSizes.cont20,
                 height: AppSizes.cont20,

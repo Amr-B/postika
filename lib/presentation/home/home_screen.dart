@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // > space between appbar and home widgets
-              SizedBox(height: AppSizes.md),
+              const SizedBox(height: AppSizes.md),
               // > search bar & filter button
               HomeSearchBar(
                 onTap: () {
@@ -41,35 +41,36 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // > in order List
-              InOrderList(),
-              SizedBox(height: AppSizes.md),
+              const InOrderList(),
+              const SizedBox(height: AppSizes.md),
 
               // Sale Banner
-              SalesContainer(),
-              SizedBox(height: AppSizes.md),
+              const SalesContainer(),
+              const SizedBox(height: AppSizes.md),
 
               // > total sales & total product
-              TotalStatus(),
+              const TotalStatus(),
 
               // > transaction
-              TransactionsWidgets(title: AppTexts.transactions),
-              TransactionsWidgets(title: AppTexts.latestTransactions),
-              SizedBox(height: AppSizes.md),
+              const TransactionsWidgets(title: AppTexts.transactions),
+              const TransactionsWidgets(title: AppTexts.latestTransactions),
+              const SizedBox(height: AppSizes.md),
               Text(
                 'Product in Low Stock',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: AppSizes.font18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
               // > products in low stock
-              TempProductContainers(),
-              SizedBox(height: AppSizes.md),
+              const TempProductContainers(),
+              const SizedBox(height: AppSizes.md),
 
-              SeeAllProductsRow(),
+              const SeeAllProductsRow(),
 
-              ProductsGridView()
+              // > products list
+              const ProductsGridView()
             ],
           ),
         ),
