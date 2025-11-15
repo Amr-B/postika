@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:poskita/utils/helpers/database_helper.dart';
-import '../models/product_model.dart';
+import '../../models/product_model.dart';
 
 class ProductLocalDataSource {
   final dbHelper = DatabaseHelper.instance;

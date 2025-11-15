@@ -1,4 +1,4 @@
-import 'package:poskita/domain/entities/product.dart';
+import 'package:poskita/data/domain/entities/product.dart';
 
 class ProductModel extends Product {
   ProductModel({
