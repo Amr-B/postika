@@ -5,11 +5,13 @@ class ProductModel extends Product {
     required int id,
     required String name,
     required String description,
+    required String image,
     required double price,
     int quantity = 0,
   }) : super(
           id: id,
           name: name,
+          image: image,
           description: description,
           price: price,
           quantity: quantity,
@@ -20,6 +22,7 @@ class ProductModel extends Product {
       id: map['id'],
       name: map['name'],
       description: map['description'],
+      image: map['image'],
       price: map['price'],
     );
   }
@@ -29,6 +32,7 @@ class ProductModel extends Product {
       'id': id,
       'name': name,
       'description': description,
+      'image': image,
       'price': price,
       'quantity': quantity,
     };

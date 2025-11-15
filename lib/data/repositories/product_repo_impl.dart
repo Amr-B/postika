@@ -1,3 +1,5 @@
+import 'package:hive/hive.dart';
+
 import '../domain/entities/product.dart';
 import '../domain/repositories/product_repo.dart';
 import '../datasources/local/product_local_data_source.dart';
@@ -13,6 +15,7 @@ class ProductRepoImpl implements ProductRepo {
     final model = ProductModel(
       id: product.id,
       name: product.name,
+      image: product.image,
       description: product.description,
       price: product.price,
     );
@@ -34,6 +37,7 @@ class ProductRepoImpl implements ProductRepo {
     final model = ProductModel(
       id: product.id,
       name: product.name,
+      image: product.image,
       description: product.description,
       price: product.price,
       quantity: product.quantity,
