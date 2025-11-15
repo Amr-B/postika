@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/utils/qnt_provider.dart';
 import 'package:provider/provider.dart';
 

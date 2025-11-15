@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_conditional_assignment, unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/theme/colors.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 
 class QntProvider with ChangeNotifier {
   int _quantity = 1;
@@ -56,12 +56,12 @@ class QntProvider with ChangeNotifier {
         left: 20,
         right: 20,
         child: Material(
+          borderRadius: BorderRadius.circular(AppSizes.radius50),
           color: AppColors.DBlue,
           child: Container(
             padding: const EdgeInsets.symmetric(
                 horizontal: AppSizes.p16, vertical: AppSizes.p12),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppSizes.radius50),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
@@ -83,7 +83,10 @@ class QntProvider with ChangeNotifier {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.arrow_forward),
+                  icon: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),

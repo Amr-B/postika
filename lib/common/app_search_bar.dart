@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 
 import 'app_iconButton.dart';
 

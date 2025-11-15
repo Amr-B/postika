@@ -1,9 +1,9 @@
 // ignore_for_file: unnecessary_null_comparison
 
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/colors.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 
 class TotalCard extends StatelessWidget {
   const TotalCard({

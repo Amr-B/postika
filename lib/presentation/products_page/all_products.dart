@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:poskita/common/app_search_bar.dart';
-import 'package:poskita/constants/theme/colors.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/temp/products_gridview.dart';
 import 'package:poskita/presentation/products_page/widgets/products_page_appbar.dart';
 

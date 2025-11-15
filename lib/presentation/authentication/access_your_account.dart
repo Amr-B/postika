@@ -4,11 +4,11 @@ import 'package:get/get.dart';
 import 'package:poskita/common/auth_appbar.dart';
 import 'package:poskita/common/auth_circular_icon.dart';
 import 'package:poskita/common/circular_checkbox.dart';
-import 'package:poskita/constants/strings/images.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/colors.dart';
-import 'package:poskita/constants/theme/sizes.dart';
-import 'package:poskita/controllers/routes_controller.dart';
+import 'package:poskita/utils/constants/strings/images.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
+import 'package:poskita/utils/controllers/routes_controller.dart';
 import 'package:poskita/presentation/authentication/widgets/app_field.dart';
 
 import '../../common/elevated_button.dart';

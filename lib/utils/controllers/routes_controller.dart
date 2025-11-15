@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:poskita/routes/app_routes.dart';
+import 'package:poskita/utils/routes/app_routes.dart';
 
 class RoutesController extends GetxController {
   void goCreatePw() {

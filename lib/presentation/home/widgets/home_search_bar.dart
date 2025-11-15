@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/widgets/home_icon_button.dart';
 
 class HomeSearchBar extends StatelessWidget {

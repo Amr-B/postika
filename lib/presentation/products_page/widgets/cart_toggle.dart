@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/presentation/products_page/widgets/qnt_widget.dart';
 
 class CartToggleButton extends StatefulWidget {

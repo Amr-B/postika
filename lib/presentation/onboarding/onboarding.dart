@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:poskita/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
 import 'package:poskita/presentation/onboarding/pageview/pageview_one.dart';
 import 'package:poskita/presentation/onboarding/pageview/pageview_two.dart';
 import 'package:poskita/presentation/onboarding/widgets/actions_row.dart';
 
-import '../../controllers/onboarding_controller.dart';
+import '../../utils/controllers/onboarding_controller.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});

@@ -1,5 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:poskita/constants/animations/page_anims.dart';
+import 'package:poskita/utils/constants/animations/page_anims.dart';
 import 'package:poskita/presentation/authentication/access_your_account.dart';
 import 'package:poskita/presentation/authentication/create_password.dart';
 import 'package:poskita/presentation/authentication/create_pin_code.dart';
@@ -11,7 +11,7 @@ import 'package:poskita/presentation/authentication/verify_email.dart';
 import 'package:poskita/presentation/onboarding/onboarding.dart';
 import 'package:poskita/presentation/products_page/all_products.dart';
 
-import '../presentation/home/home_screen.dart';
+import '../../presentation/home/home_screen.dart';
 
 class AppRoutes {
   // authentication routes

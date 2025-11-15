@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:poskita/common/back_button.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 
 class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback onTap;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/presentation/home/widgets/transaction_card.dart';
 
 class TransactionsWidgets extends StatelessWidget {

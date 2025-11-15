@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/colors.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/colors.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:get/get.dart';
 
-import '../../../controllers/routes_controller.dart';
+import '../../../utils/controllers/routes_controller.dart';
 
 class ProductsPageAppBar extends StatelessWidget
     implements PreferredSizeWidget {

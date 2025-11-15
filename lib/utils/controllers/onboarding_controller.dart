@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:poskita/routes/app_routes.dart';
+import 'package:poskita/utils/routes/app_routes.dart';
 
 class OnboardingController extends GetxController {
   final PageController pageController = PageController();
@@ -22,7 +22,7 @@ class OnboardingController extends GetxController {
   }
 
   void skip() {
-    Get.offAllNamed(AppRoutes.setupProfile);
+    Get.offAllNamed(AppRoutes.homeScreen);
   }
 
   @override

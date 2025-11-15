@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poskita/constants/strings/text.dart';
-import 'package:poskita/constants/theme/sizes.dart';
+import 'package:poskita/utils/constants/strings/text.dart';
+import 'package:poskita/utils/constants/theme/sizes.dart';
 import 'package:poskita/utils/qnt_provider.dart';
 import 'package:provider/provider.dart';
-import '../../../constants/strings/images.dart';
+import '../../../utils/constants/strings/images.dart';
 import '../widgets/product_card.dart';
 
 class ProductsGridView extends StatelessWidget {
